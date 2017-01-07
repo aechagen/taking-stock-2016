@@ -1,1 +1,1 @@
-$(document).ready(function(){(new WOW).init()});
+$(document).ready(function(){(new WOW).init(),$("img").addClass("img-responsive")});
