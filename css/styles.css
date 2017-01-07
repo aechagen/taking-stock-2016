@@ -112,22 +112,49 @@ header {
 
 #conclusion {
   background: #F45B69;
-  height: 400px;
-  width: 100%; }
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px; }
   #conclusion h1 {
     text-align: center;
     font-size: 3rem; }
-  #conclusion p {
-    width: 50%;
-    height: 40%;
-    margin: 0 auto;
-    font-size: 1.2em; }
 
 footer {
   text-align: center;
-  padding-top: 20px; }
+  height: 60px;
+  padding-top: 20px;
+  padding-bottom: 5px; }
   footer a {
     text-decoration: none;
     color: #fff; }
   footer a:hover {
     color: #F45B69; }
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px; /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+   
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+   
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+   
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+  }
+}
